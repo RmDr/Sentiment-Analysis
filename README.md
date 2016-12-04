@@ -7,7 +7,7 @@ train_size | test_size | n_estimators |score | training time
 51272 | 51272 | 50 | 0.33 | < 1 min
 51272 | 51272 | 400 | 0.35 | ~ 10-20 min
 
-### Dense NN, first layer (embedding pretrained)
+### Dense NN, first layer (embedding) pretrained = http://nlp.stanford.edu/projects/glove/.
 ```python
 sequence_input = Input(shape=(MAX_SEQUENCE_LENGTH,), dtype='int32')
 embedded_sequences = embedding_layer(sequence_input)
