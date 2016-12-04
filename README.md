@@ -56,4 +56,4 @@ model.compile(loss='categorical_crossentropy', optimizer='rmsprop', metrics=['ac
 
 train_size | test_size | batch_size |nb_epoch |score | training time
 ------------ | ------------- | ----------| ---------- | ------------- | ----------
-51272 | 51272 | 128 | 2 |  | ~  min
+51272 | 51272 | 128 | 2 | 0.42 | ~  2h 30min
