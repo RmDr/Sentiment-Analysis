@@ -25,3 +25,14 @@ model.compile(loss='categorical_crossentropy',
 train_size | test_size | batch_size |nb_epoch |score | training time
 ------------ | ------------- | ----------| ---------- | ------------- | ----------
 51272 | 51272 | 128 | 2 | 0.41 | ~ 20 min
+
+### LSTM, first layer (embedding) pretrained = http://nlp.stanford.edu/projects/glove/.
+```python
+sequence_input = Input(shape=(MAX_SEQUENCE_LENGTH,), dtype='int32')
+embedded_sequences = embedding_layer(sequence_input)
+
+```
+
+train_size | test_size | batch_size |nb_epoch |score | training time
+------------ | ------------- | ----------| ---------- | ------------- | ----------
+51272 | 51272 | 128 | 2 | 0.47 | ~ 60 min
