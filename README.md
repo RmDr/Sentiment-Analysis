@@ -42,7 +42,7 @@ train_size | test_size | batch_size |nb_epoch |score | training time
 51272 | 51272 | 128 | 2 | 0.47 | ~ 60 min
 
 
-### LSTM, first layer (embedding) pretrained = http://nlp.stanford.edu/projects/glove/.
+### LSTMx2, first layer (embedding) pretrained = http://nlp.stanford.edu/projects/glove/.
 ```python
 sequence_input = Input(shape=(MAX_SEQUENCE_LENGTH,), dtype='int32')
 embedding_layer = PretrainedEmbeddingLayer()
