@@ -1,4 +1,4 @@
-# Sentiment-Analysis results
+# Sentiment Analysis results
 Data: scoring: categorical_accuracy.
 ### RF
 
@@ -37,7 +37,7 @@ train_size | test_size | batch_size |nb_epoch |score | training time
 
 ### LSTM, first layer (embedding) pretrained = http://nlp.stanford.edu/projects/glove/. 
 
-embedding_dim = 100
+glove.6B.100d
 
 
 ```python
@@ -90,4 +90,26 @@ train_size | test_size | batch_size | nb_epoch |score | training + test time
 ------------ | ------------- | ----------| ---------- | ------------- | ----------
 51272 | 51272 | 128 | 1 | 0.4499 | ~ 90 min
 51272 | 51272 | 128 | 2 | 0.5035 | ~ 90 min
-51272 | 51272 | 128 | 3 |  | ~ 90 min
+51272 | 51272 | 128 | 3 | 0.5170 | ~ 90 min
+
+### LSTM, first layer (embedding) pretrained = http://nlp.stanford.edu/projects/glove/. 
+glove: 840B tokens .300 ddim. 2.2m dif words
+
+```python
+sequence_input = Input(shape=(MAX_SEQUENCE_LENGTH,), dtype='int32')
+embedding_layer
+LSTM(50, W_regularizer='l2')
+Dropout(0.25)
+Dense(25, activation='relu', W_regularizer='l2')
+out = Dense(5, activation='softmax', W_regularizer='l2
+model = Model(sequence_input, out)
+model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['acc'])
+```
+Total params: 71605
+
+
+train_size | test_size | batch_size | nb_epoch |score | training + test time
+------------ | ------------- | ----------| ---------- | ------------- | ----------
+51272 | 51272 | 128 | 1 | 0.4927 | ~ 25 min
+51272 | 51272 | 128 | 2 | 0.4929 | ~ 25 min
+51272 | 51272 | 128 | 3 |  | ~ 25 min
