@@ -131,6 +131,6 @@ Total params: 33535
 
 train_size | batch_size | nb_epoch |public leaderboard score | training time
 ------------ | ------------- | ----------| ---------- | ------------- | ----------
-102582 | 128 | 7 |  | ~ 3 h
+102582 | 128 | 7 | 0.54056 | ~ 3 h
 
 
