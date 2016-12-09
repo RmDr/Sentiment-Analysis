@@ -129,7 +129,9 @@ model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['acc']
 ```
 Total params: 33535
 
-train_size | test_size | batch_size | nb_epoch |public leaderboard score | training + test time
+train_size | test_size | batch_size | nb_epoch |public 
+leaderboard score 
+| training + test time
 ------------ | ------------- | ----------| ---------- | ------------- | ----------
 51272 | 51272 | 128 | 7 | 0.4927 | ~ 25 min
 
