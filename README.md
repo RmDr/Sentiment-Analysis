@@ -14,7 +14,7 @@ train_size | test_size | n_estimators |score | training time
 train_size | test_size | kernel |score | training time
 ------------ | ------------- | ---------- | ------------- | ----------
 51272 | 51272 | rbf | ? | > 3 h
-51272 | 51272 | linear |  | 
+51272 | 51272 | linear | 0.24 | < 1 min 
 
 
 ### Dense NN, first layer (embedding) pretrained = http://nlp.stanford.edu/projects/glove/.
