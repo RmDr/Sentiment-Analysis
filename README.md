@@ -161,7 +161,7 @@ model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['acc']
 
 Best mixture is 0.959 * NN + (1 - 0.959) * RF.
 
-train_size | |public leaderboard score | private leaderboard score | training time
+train_size | public leaderboard score | private leaderboard score | training time
 ------------ | ---------- | ------------- | ----------
 102582 |  0.55132 |	0.55513 | ~ 7 h
 
