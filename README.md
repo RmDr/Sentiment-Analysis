@@ -1,7 +1,18 @@
 # Sentiment Analysis results
-Data: scoring: categorical_accuracy.
-### RF
+Data: 102582 train sentiments, 34194 test sentiments, target: int in [1, 5]. Scoring: categorical_accuracy.
 
+### Preprocessing
+1) Delete nltk.corpus.stopwords.
+
+2) Filter word frequences: delete words with frequence in test and train less than 2.
+
+3) Delete all non alpha-num words.
+
+4) Coding all test and train sentiments with keras.preprocessing.text.Tokenizer
+
+5) Pad the lest side of encoded sentiments.
+
+### sklearn.ensemble.RandomForestClassifier
 
 train_size | test_size | n_estimators |score | training time
 ------------ | ------------- | ---------- | ------------- | ----------
@@ -18,6 +29,8 @@ train_size | test_size | kernel |score | training time
 
 
 ### Dense NN, first layer (embedding) pretrained = http://nlp.stanford.edu/projects/glove/.
+Pretrained glove dictionary: 6B tokens; dim=100; 400k different words.
+
 ```python
 sequence_input = Input(shape=(MAX_SEQUENCE_LENGTH,), dtype='int32')
 embedding_layer = PretrainedEmbeddingLayer()
@@ -36,8 +49,7 @@ train_size | test_size | batch_size |nb_epoch |score | training time
 51272 | 51272 | 128 | 2 | 0.41 | ~ 20 min
 
 ### LSTM, first layer (embedding) pretrained = http://nlp.stanford.edu/projects/glove/. 
-
-glove.6B.100d
+Pretrained glove dictionary: 6B tokens; dim=100; 400k different words.
 
 
 ```python
@@ -55,6 +67,8 @@ train_size | test_size | batch_size |nb_epoch |score | training time
 
 
 ### LSTMx2, first layer (embedding) pretrained = http://nlp.stanford.edu/projects/glove/.
+Pretrained glove dictionary: 6B tokens; dim=100; 400k different words.
+
 ```python
 
 sequence_input = Input(shape=(MAX_SEQUENCE_LENGTH,), dtype='int32')
@@ -71,7 +85,7 @@ train_size | test_size | batch_size |nb_epoch |score | training time
 51272 | 51272 | 128 | 2 | 0.42 | ~  2h 30min
 
 ### LSTM, first layer (embedding) pretrained = http://nlp.stanford.edu/projects/glove/. 
-glove: 840B tokens .300 ddim. 2.2m dif words
+Pretrained glove dictionary: 840B tokens; dim=300; 2.2m different words.
 
 ```python
 sequence_input = Input(shape=(MAX_SEQUENCE_LENGTH,), dtype='int32')
@@ -93,7 +107,7 @@ train_size | test_size | batch_size | nb_epoch |score | training + test time
 51272 | 51272 | 128 | 3 | 0.5170 | ~ 90 min
 
 ### LSTM, first layer (embedding) pretrained = http://nlp.stanford.edu/projects/glove/. 
-glove: 840B tokens .300 ddim. 2.2m dif words
+Pretrained glove dictionary: 840B tokens; dim=300; 2.2m different words.
 
 ```python
 sequence_input = Input(shape=(MAX_SEQUENCE_LENGTH,), dtype='int32')
@@ -115,7 +129,7 @@ train_size | test_size | batch_size | nb_epoch |score | training + test time
 51272 | 51272 | 128 | 3 | 0.5261 | ~ 25 min
 
 ### LSTM, first layer (embedding) pretrained = http://nlp.stanford.edu/projects/glove/. 
-glove: 840B tokens .300 ddim. 2.2m dif words
+pretrained glove dictionary: 840B tokens; dim=300; 2.2m different words.
 
 ```python
 sequence_input = Input(shape=(MAX_SEQUENCE_LENGTH,), dtype='int32')
